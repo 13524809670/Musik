@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>  
+  <meta charset="utf-8" />
+  <title>图标--表单</title>
+  <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="js/jPlayer/jplayer.flat.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+  <link rel="stylesheet" href="css/app.css" type="text/css" />  
+  <link rel="stylesheet" href="css/htmleaf-demo.css" type="text/css" />  
+  
+  <!--[if lt IE 9]>
+    <script src="js/ie/html5shiv.js"></script>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/excanvas.js"></script>
+  <![endif]-->
+</head>
+<body class="">
+  <section class="vbox">
+     <header class="bg-white-only header header-md navbar navbar-fixed-top-xs">
+      <div class="navbar-header aside bg-info dk">
+        <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+          <i class="icon-list"></i>
+        </a>
+        <a href="index.html" class="navbar-brand text-lt">
+          <i class="icon-earphones"></i>
+          <img src="images/logo.png" alt="." class="hide">
+          <span class="hidden-nav-xs m-l-sm">Musik</span>
+        </a>
+        <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+          <i class="icon-settings"></i>
+        </a>
+      </div>      
+      <ul class="nav navbar-nav hidden-xs">
+        <li>
+          <a href="#nav,.navbar-header" data-toggle="class:nav-xs,nav-xs" class="text-muted">
+            <i class="fa fa-indent text"></i>
+            <i class="fa fa-dedent text-active"></i>
+          </a>
+        </li>
+      </ul>
+      <div class="navbar-right ">
+        <ul class="nav navbar-nav m-n hidden-xs nav-user user">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="images/a0.png" alt="...">
+              </span>
+              John.Smith <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu animated fadeInRight">            
+              <li>
+                <span class="arrow top"></span>
+                <a href="#">设置</a>
+              </li>
+              <li>
+                <a href="docs.html">帮助</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="modal.lockme.html" data-toggle="ajaxModal" >退出</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>      
+    </header>
+
+
+
+    <section>
+      <section class="hbox stretch">
+        <!-- .aside -->
+        <aside class="bg-black dk aside hidden-print" id="nav">          
+          <section class="vbox">
+            <section class="w-f-md scrollable">
+              <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+
+                <!-- nav -->                 
+                <nav class="nav-primary hidden-xs">
+                  <ul class="nav" data-ride="collapse">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                      Interface
+                    </li>
+                    <li>
+                      <a href="table-static.html" class="auto">
+                        <span class="pull-right text-muted">
+                          <i class="fa fa-angle-left text"></i>
+                          <i class="fa fa-angle-down text-active"></i>
+                        </span>
+                        <i class="icon-screen-desktop icon">
+                        </i>
+                        <span>客户数据表单</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="chart.html" class="auto">
+                        <span class="pull-right text-muted">
+                          <i class="fa fa-angle-left text"></i>
+                          <i class="fa fa-angle-down text-active"></i>
+                        </span>
+                        <i class="icon-grid icon">
+                        </i>
+                        <span>客户人群分析</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="signin.html" class="auto">
+                        <span class="pull-right text-muted">
+                          <i class="fa fa-angle-left text"></i>
+                          <i class="fa fa-angle-down text-active"></i>
+                        </span>
+                        <i class="icon-grid icon">
+                        </i>
+                        <span>登陆</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="signup.html" class="auto">
+                        <span class="pull-right text-muted">
+                          <i class="fa fa-angle-left text"></i>
+                          <i class="fa fa-angle-down text-active"></i>
+                        </span>
+                        <i class="icon-grid icon">
+                        </i>
+                        <span>注册</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- / nav -->
+              </div>
+            </section>
+
+          </section>
+        </aside>
+        <section id="content">
+          <section class="vbox">
+            <section class="scrollable padder">
+              <div class="m-b-md"></div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <section class="panel panel-default">
+                    <header class="panel-heading font-bold">图标</header>
+                    <div class="panel-body">
+                      <div id="flot-pie"  style="height:520px"></div>
+                    </div>                  
+                  </section>
+                </div>
+              </div>
+              
+              <div class="row" style="overflow-x: scroll;">
+                <div class="col-lg-12">
+                  <section class="panel panel-default">
+                    <header class="panel-heading">表单</header>
+                    <div class="panel-body text-center">              
+                      <div class="htmleaf-container">
+                        <div class="demo">
+                          <!-- <div class="container"> -->
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingOne">
+                                      <h4 class="panel-title">
+                                        <a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">院长</a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="panel-body">
+                                         
+                                          <div class="table-responsive">
+                                            <table class="table table-striped b-t b-light">
+                                              <thead>
+                                                <tr>
+                                                  <th style="width:20px;"><label class="checkbox m-n i-checks"><input type="checkbox"><i></i></label></th>
+                                                  <th class="th-sortable" data-toggle="class" style="text-align: center;">负责人</th>
+                                                  <th style="text-align: center;">职级</th>
+                                                  <th style="text-align: center;">科室</th>
+                                                  <th style="text-align: center;">特长</th>
+                                                  <th style="text-align: center;">客户满意度</th>
+                                                  <th style="text-align: center;">操作</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                                                  <td>马云</td>
+                                                  <td>院长</td>
+                                                  <td>院长</td>
+                                                  <td>发展中华医术</td>
+                                                  <td>8分</td>
+                                                  <td width="200px">
+                                                    <a href="#" class="btn btn-xs btn-info">编辑</a>
+                                                    <a href="#" class="btn btn-xs btn-danger">删除</a>
+                                                    <a href="#" class="btn btn-xs btn-warning">推送</a>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                        </div>
+                                    </div>
+                                  </div>
+
+
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                      <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">牙科专家</a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                      <div class="panel-body">
+                                         <div class="table-responsive">
+                                            <table class="table table-striped b-t b-light">
+                                              <thead>
+                                                <tr>
+                                                  <th style="width:20px;"><label class="checkbox m-n i-checks"><input type="checkbox"><i></i></label></th>
+                                                  <th class="th-sortable" data-toggle="class" style="text-align: center;">负责人</th>
+                                                  <th style="text-align: center;">职级</th>
+                                                  <th style="text-align: center;">科室</th>
+                                                  <th style="text-align: center;">特长</th>
+                                                  <th style="text-align: center;">客户满意度</th>
+                                                  <th style="text-align: center;">操作</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                                                  <td>马云</td>
+                                                  <td>专家</td>
+                                                  <td>专家牙科</td>
+                                                  <td>拔牙</td>
+                                                  <td>8分</td>
+                                                  <td width="200px">
+                                                    <a href="#" class="btn btn-xs btn-info">编辑</a>
+                                                    <a href="#" class="btn btn-xs btn-danger">删除</a>
+                                                    <a href="#" class="btn btn-xs btn-warning">推送</a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                                                  <td>马云</td>
+                                                  <td>专家</td>
+                                                  <td>专家牙科</td>
+                                                  <td>拔牙</td>
+                                                  <td>8分</td>
+                                                  <td width="200px">
+                                                    <a href="#" class="btn btn-xs btn-info">编辑</a>
+                                                    <a href="#" class="btn btn-xs btn-danger">删除</a>
+                                                    <a href="#" class="btn btn-xs btn-warning">推送</a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                                                  <td>马云</td>
+                                                  <td>专家</td>
+                                                  <td>专家牙科</td>
+                                                  <td>拔牙</td>
+                                                  <td>8分</td>
+                                                  <td width="200px">
+                                                    <a href="#" class="btn btn-xs btn-info">编辑</a>
+                                                    <a href="#" class="btn btn-xs btn-danger">删除</a>
+                                                    <a href="#" class="btn btn-xs btn-warning">推送</a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                                                  <td>马云</td>
+                                                  <td>专家</td>
+                                                  <td>专家牙科</td>
+                                                  <td>拔牙</td>
+                                                  <td>8分</td>
+                                                  <td width="200px">
+                                                    <a href="#" class="btn btn-xs btn-info">编辑</a>
+                                                    <a href="#" class="btn btn-xs btn-danger">删除</a>
+                                                    <a href="#" class="btn btn-xs btn-warning">推送</a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                                                  <td>马云</td>
+                                                  <td>专家</td>
+                                                  <td>专家牙科</td>
+                                                  <td>拔牙</td>
+                                                  <td>8分</td>
+                                                  <td width="200px">
+                                                    <a href="#" class="btn btn-xs btn-info">编辑</a>
+                                                    <a href="#" class="btn btn-xs btn-danger">删除</a>
+                                                    <a href="#" class="btn btn-xs btn-warning">推送</a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                                                  <td>马云</td>
+                                                  <td>专家</td>
+                                                  <td>专家牙科</td>
+                                                  <td>拔牙</td>
+                                                  <td>8分</td>
+                                                  <td width="200px">
+                                                    <a href="#" class="btn btn-xs btn-info">编辑</a>
+                                                    <a href="#" class="btn btn-xs btn-danger">删除</a>
+                                                    <a href="#" class="btn btn-xs btn-warning">推送</a>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                          <footer class="panel-footer">
+                                            <div class="row">
+                                              <div class="col-sm-12 text-right text-center-xs">                
+                                                <ul class="pagination pagination-sm m-t-none m-b-none">
+                                                  <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                                                  <li><a href="#">1</a></li>
+                                                  <li><a href="#">2</a></li>
+                                                  <li><a href="#">3</a></li>
+                                                  <li><a href="#">4</a></li>
+                                                  <li><a href="#">5</a></li>
+                                                  <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </footer>
+                                      </div>
+                                    </div>
+                                  </div>
+
+
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingThree">
+                                      <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">牙科医生</a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                      <div class="panel-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped b-t b-light">
+                                              <thead>
+                                                <tr>
+                                                  <th style="width:20px;"><label class="checkbox m-n i-checks"><input type="checkbox"><i></i></label></th>
+                                                  <th class="th-sortable" data-toggle="class" style="text-align: center;">负责人</th>
+                                                  <th style="text-align: center;">职级</th>
+                                                  <th style="text-align: center;">科室</th>
+                                                  <th style="text-align: center;">特长</th>
+                                                  <th style="text-align: center;">客户满意度</th>
+                                                  <th style="text-align: center;">操作</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                                                  <td>马云</td>
+                                                  <td>门诊主任</td>
+                                                  <td>门诊</td>
+                                                  <td>拔牙</td>
+                                                  <td>8分</td>
+                                                  <td width="200px">
+                                                    <a href="#" class="btn btn-xs btn-info">编辑</a>
+                                                    <a href="#" class="btn btn-xs btn-danger">删除</a>
+                                                    <a href="#" class="btn btn-xs btn-warning">推送</a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                                                  <td>马云</td>
+                                                  <td>门诊主任</td>
+                                                  <td>门诊</td>
+                                                  <td>拔牙</td>
+                                                  <td>8分</td>
+                                                  <td width="200px">
+                                                    <a href="#" class="btn btn-xs btn-info">编辑</a>
+                                                    <a href="#" class="btn btn-xs btn-danger">删除</a>
+                                                    <a href="#" class="btn btn-xs btn-warning">推送</a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                                                  <td>马云</td>
+                                                  <td>门诊主任</td>
+                                                  <td>门诊</td>
+                                                  <td>拔牙</td>
+                                                  <td>8分</td>
+                                                  <td width="200px">
+                                                    <a href="#" class="btn btn-xs btn-info">编辑</a>
+                                                    <a href="#" class="btn btn-xs btn-danger">删除</a>
+                                                    <a href="#" class="btn btn-xs btn-warning">推送</a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                                                  <td>马云</td>
+                                                  <td>门诊主任</td>
+                                                  <td>门诊</td>
+                                                  <td>拔牙</td>
+                                                  <td>8分</td>
+                                                  <td width="200px">
+                                                    <a href="#" class="btn btn-xs btn-info">编辑</a>
+                                                    <a href="#" class="btn btn-xs btn-danger">删除</a>
+                                                    <a href="#" class="btn btn-xs btn-warning">推送</a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                                                  <td>马云</td>
+                                                  <td>门诊主任</td>
+                                                  <td>门诊</td>
+                                                  <td>拔牙</td>
+                                                  <td>8分</td>
+                                                  <td width="200px">
+                                                    <a href="#" class="btn btn-xs btn-info">编辑</a>
+                                                    <a href="#" class="btn btn-xs btn-danger">删除</a>
+                                                    <a href="#" class="btn btn-xs btn-warning">推送</a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                                                  <td>马云</td>
+                                                  <td>门诊主任</td>
+                                                  <td>门诊</td>
+                                                  <td>拔牙</td>
+                                                  <td>8分</td>
+                                                  <td width="200px">
+                                                    <a href="#" class="btn btn-xs btn-info">编辑</a>
+                                                    <a href="#" class="btn btn-xs btn-danger">删除</a>
+                                                    <a href="#" class="btn btn-xs btn-warning">推送</a>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                          <footer class="panel-footer">
+                                            <div class="row">
+                                              <div class="col-sm-12 text-right text-center-xs">                
+                                                <ul class="pagination pagination-sm m-t-none m-b-none">
+                                                  <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                                                  <li><a href="#">1</a></li>
+                                                  <li><a href="#">2</a></li>
+                                                  <li><a href="#">3</a></li>
+                                                  <li><a href="#">4</a></li>
+                                                  <li><a href="#">5</a></li>
+                                                  <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </footer>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      <!-- </div> -->
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+      </section>
+    </section>    
+  </section>
+  <script src="js/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.js"></script>
+  <!-- App -->
+  <script src="js/app.js"></script>  
+  <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- Sparkline Chart -->
+  <script src="js/charts/sparkline/jquery.sparkline.min.js"></script>
+  <!-- Easy Pie Chart -->
+  <script src="js/charts/easypiechart/jquery.easy-pie-chart.js"></script>
+  <!-- Flot -->
+  <script src="js/charts/flot/jquery.flot.min.js"></script>
+  <script src="js/charts/flot/jquery.flot.tooltip.min.js"></script>
+  <script src="js/charts/flot/jquery.flot.resize.js"></script>
+  <script src="js/charts/flot/jquery.flot.orderBars.js"></script>
+  <script src="js/charts/flot/jquery.flot.pie.min.js"></script>
+  <script src="js/charts/flot/jquery.flot.grow.js"></script>
+  <script src="js/charts/flot/demo.js"></script>
+  <script src="js/app.plugin.js"></script>
+  <script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
+  <script type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+  <script type="text/javascript" src="js/jPlayer/demo.js"></script>
+
+</body>
+</html>
